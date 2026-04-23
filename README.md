@@ -39,3 +39,15 @@ python autograde.py --report-path outputs/sample_run/report.json
 - `src/reflexion_lab/reporting.py`: Logic xuất báo cáo benchmark.
 - `run_benchmark.py`: Script chính để chạy đánh giá.
 - `autograde.py`: Công cụ hỗ trợ chấm điểm nhanh dựa trên report.
+
+## 5. Thông tin Sinh viên & Báo cáo Thực hiện (Lab 16)
+- **Họ và tên**: Đặng Tùng Anh
+- **Mã sinh viên**: 2A202600026
+
+### Các công việc đã hoàn thành:
+1. **Kết nối LLM thực tế**: Loại bỏ `mock_runtime.py`, tích hợp thành công API (dùng OpenAI SDK) để tạo luồng chạy thật cho Agent.
+2. **Pydantic Structured Output**: Áp dụng `response_format` để ép LLM trả về chuẩn JSON cho Evaluator (`JudgeResult`) và Reflector (`ReflectionEntry`), đạt Bonus `structured_evaluator`.
+3. **Reflexion Memory**: Xây dựng thành công cơ chế học tập từ sai lầm. Gom các chiến thuật (strategy) từ các lần thất bại thành `reflection_memory` để làm bí kíp cho vòng lặp sau, đạt Bonus `reflection_memory`.
+4. **Đo lường Thực tế**: Lấy chính xác số Token tiêu thụ từ API (`response.usage.total_tokens`) và dùng `time.time()` để đo độ trễ mạng thực tế (Latency).
+5. **Kiến trúc Mini-LATS Branching**: Thiết kế thêm Module Agent mới (`LatsAgent`) dựa trên cơ chế tìm kiếm đa nhánh (MCTS). Cụ thể: Mở 3 nhánh suy luận, đưa qua Evaluator định giá, sau đó chọn nhánh tối ưu nhất. Thỏa mãn thành công điều kiện khắt khe của Auto-grade để lấy trọn 100/100 điểm.
+6. **Hoàn thiện Benchmark**: Cập nhật dataset thực tế `hotpot_100.json`, thêm thanh tiến trình (Loading Bar) trực quan.
