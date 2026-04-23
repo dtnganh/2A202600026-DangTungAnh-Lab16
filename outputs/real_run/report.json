@@ -1,0 +1,3068 @@
+{
+  "meta": {
+    "dataset": "hotpot_100.json",
+    "mode": "mock",
+    "num_records": 300,
+    "agents": [
+      "mini_lats_branching",
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 100,
+      "em": 0.86,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1741.16,
+      "avg_latency_ms": 2170.8
+    },
+    "reflexion": {
+      "count": 100,
+      "em": 0.93,
+      "avg_attempts": 1.23,
+      "avg_token_estimate": 2249.44,
+      "avg_latency_ms": 3056.21
+    },
+    "mini_lats_branching": {
+      "count": 100,
+      "em": 0.95,
+      "avg_attempts": 1.14,
+      "avg_token_estimate": 5495.78,
+      "avg_latency_ms": 5478.16
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.07,
+      "attempts_abs": 0.23,
+      "tokens_abs": 508.28,
+      "latency_abs": 885.41
+    }
+  },
+  "failure_modes": {
+    "react": {
+      "none": 86,
+      "entity_drift": 7,
+      "wrong_final_answer": 7
+    },
+    "reflexion": {
+      "none": 93,
+      "entity_drift": 4,
+      "wrong_final_answer": 3
+    },
+    "mini_lats_branching": {
+      "none": 95,
+      "entity_drift": 2,
+      "wrong_final_answer": 3
+    }
+  },
+  "examples": [
+    {
+      "qid": "5adf44095542995534e8c777",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both The Moon-Spinners and The Jungle Book were produced by Walt Disney Productions.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a89fbcf55429970aeb701dd",
+      "agent_type": "react",
+      "gold_answer": "Lucona",
+      "predicted_answer": "Lucona",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab8173a5542992aa3b8c89c",
+      "agent_type": "react",
+      "gold_answer": "five pieces",
+      "predicted_answer": "Sergei Rachmaninoff's \"Prelude in C-sharp minor\" is one part of five pieces in \"Morceaux de fantaisie.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae4140e55429970de88d8e8",
+      "agent_type": "react",
+      "gold_answer": "The Gas Face",
+      "predicted_answer": "Donald Newkirk is known for his voice-over on 3rd Bass' song \"The Gas Face.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c835b554299653c1aa0a1",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, Vanessa Petruo is from Germany, while Greek Fire is from the United States.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abe01c35542991f661060a0",
+      "agent_type": "react",
+      "gold_answer": "Yuka Honda",
+      "predicted_answer": "Yuka Honda.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8643eb5542991e771815e6",
+      "agent_type": "react",
+      "gold_answer": "2 March 1952",
+      "predicted_answer": "Jane Henschel was born on 2 March 1952.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7f5a8f55429969796c1a0c",
+      "agent_type": "react",
+      "gold_answer": "Matthew Flinders",
+      "predicted_answer": "Flinders University was founded in 1966.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac00999554299012d1db581",
+      "agent_type": "react",
+      "gold_answer": "Waset",
+      "predicted_answer": "Waset",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae762475542997ec2727628",
+      "agent_type": "react",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Beijing.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0630f5542992a796ded12",
+      "agent_type": "react",
+      "gold_answer": "Erik Paulsen",
+      "predicted_answer": "Erik Paulsen.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a711d325542994082a3e5a1",
+      "agent_type": "react",
+      "gold_answer": "Scorp\u00e8ne-class submarine",
+      "predicted_answer": "The Scorp\u00e8ne-class submarine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7f85055542994857a7675a",
+      "agent_type": "react",
+      "gold_answer": "population of 10,445",
+      "predicted_answer": "The population of Fitzroy, where the Mayfields bar is located, is 10,445 according to the 2016 Census.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab7d310554299366779400a",
+      "agent_type": "react",
+      "gold_answer": "968",
+      "predicted_answer": "Saint Matilda died on 14 March 968.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae01a6a554299025d62a3f9",
+      "agent_type": "react",
+      "gold_answer": "United States",
+      "predicted_answer": "United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae002bf55429925eb1afbda",
+      "agent_type": "react",
+      "gold_answer": "Ohio",
+      "predicted_answer": "The Black Keys are from Ohio.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab8417955429919ba4e228e",
+      "agent_type": "react",
+      "gold_answer": "California",
+      "predicted_answer": "California",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d4a2c5542997cc2c4744b",
+      "agent_type": "react",
+      "gold_answer": "George Balanchine",
+      "predicted_answer": "George Balanchine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab410745542996a3a969f09",
+      "agent_type": "react",
+      "gold_answer": "second",
+      "predicted_answer": "\"Fifteen Million Merits\" is the second episode of the first season of \"Black Mirror.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8978c9554299669944a52d",
+      "agent_type": "react",
+      "gold_answer": "military",
+      "predicted_answer": "Beijing Nanyuan Airport is a military airbase that also serves as a commercial airport for China United Airlines.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7b6a87554299042af8f76c",
+      "agent_type": "react",
+      "gold_answer": "rock",
+      "predicted_answer": "Both Perry Farrell and Roger Hodgson are associated with rock music, specifically alternative rock and progressive rock, respectively.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae5069455429960a22e0244",
+      "agent_type": "react",
+      "gold_answer": "1944",
+      "predicted_answer": "Susan Denberg was born in 1944.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76043a554299109176e605",
+      "agent_type": "react",
+      "gold_answer": "Kelly Ann McGillis",
+      "predicted_answer": "Kelly McGillis",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a80b1cf5542992bc0c4a7af",
+      "agent_type": "react",
+      "gold_answer": "four",
+      "predicted_answer": "The team that races the Red Bull RB4, Red Bull Racing, has won four successive Constructors' Championship titles.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5add5e9d5542992ae4cec52b",
+      "agent_type": "react",
+      "gold_answer": "American",
+      "predicted_answer": "Both Spider One and John Popper are American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e1f2355429917b4a5bd2e",
+      "agent_type": "react",
+      "gold_answer": "the State of Georgia as part of the Georgia World Congress Center Authority",
+      "predicted_answer": "The Georgia Dome, owned and operated by the State of Georgia.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7dbe735542997cc2c47491",
+      "agent_type": "react",
+      "gold_answer": "Donald Jay Fagen",
+      "predicted_answer": "Donald Fagen is older than Eddie Vedder.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf0ff15542992d7e9f92a1",
+      "agent_type": "react",
+      "gold_answer": "the 209 Corps of the Afghan National Army",
+      "predicted_answer": "General Qadam Shah Shahim resigned after the attack on Camp Shaheen headquarters.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0fbc7554299294b219064",
+      "agent_type": "react",
+      "gold_answer": "Richard III",
+      "predicted_answer": "Richard III",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab63a6c5542995eadeeff82",
+      "agent_type": "react",
+      "gold_answer": "Finn Wolfhard",
+      "predicted_answer": "Finn Wolfhard.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab983d0554299131ca42357",
+      "agent_type": "react",
+      "gold_answer": "All Things Must Pass",
+      "predicted_answer": "All Things Must Pass",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0cee155429945ae959460",
+      "agent_type": "react",
+      "gold_answer": "\"Miami Latin Boys\"",
+      "predicted_answer": "Miami Sound Machine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abccf405542993a06baf96e",
+      "agent_type": "react",
+      "gold_answer": "Erich Seligmann Fromm",
+      "predicted_answer": "Erich Fromm has a broader scope of profession, being a social psychologist, psychoanalyst, sociologist, philosopher, and democratic socialist, while Ralph Ellison is primarily known as a novelist and literary critic.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae1451555429920d523436a",
+      "agent_type": "react",
+      "gold_answer": "Paul Carrack",
+      "predicted_answer": "Paul Carrack had a solo career.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8047065542992bc0c4a6d7",
+      "agent_type": "react",
+      "gold_answer": "San Juan",
+      "predicted_answer": "San Juan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae449bb5542995ad6573d33",
+      "agent_type": "react",
+      "gold_answer": "Serbia and Montenegro",
+      "predicted_answer": "Mladen Krstaji\u0107 represented Serbia and Montenegro at the FIFA 2006 World Cup.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7cfb4955429909bec768da",
+      "agent_type": "react",
+      "gold_answer": "1945",
+      "predicted_answer": "The outbreak of World War II lasted until 1945.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae73ca65542997b22f6a625",
+      "agent_type": "react",
+      "gold_answer": "City of Westminster",
+      "predicted_answer": "London.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8367685542992ef85e22ad",
+      "agent_type": "react",
+      "gold_answer": "U.S. Route 62",
+      "predicted_answer": "The William H. Harsha Bridge carries U.S. Route 62.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac3bb545542993915413907",
+      "agent_type": "react",
+      "gold_answer": "Slow Moving Millie",
+      "predicted_answer": "Slow Moving Millie.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd0e3b5542996e802b46cd",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Dave Matthews Band and Robert Young are rock-based musicians.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b68e755429949d91db59e",
+      "agent_type": "react",
+      "gold_answer": "Kesha",
+      "predicted_answer": "Kesha.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b222755429971feec4648",
+      "agent_type": "react",
+      "gold_answer": "FC Barcelona",
+      "predicted_answer": "The current holder of Ligue 1 Young Player of the Year, Ousmane Demb\u00e9l\u00e9, plays for FC Barcelona.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a1bdd5542990783324e60",
+      "agent_type": "react",
+      "gold_answer": "foot race",
+      "predicted_answer": "The Panhellenic Games and Hoplitodromos involve athletic competitions.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85374e5542992a431d1aef",
+      "agent_type": "react",
+      "gold_answer": "7\u20135",
+      "predicted_answer": "The Cowboys' record in the first season under Jimmy Johnson, who later became a broadcaster and executive, was 7\u20135.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae26f125542992decbdcd02",
+      "agent_type": "react",
+      "gold_answer": "LeAnn Rimes",
+      "predicted_answer": "Johnny Cash's album \"Water from the Wells of Home\" contained a song written by Paul McCartney.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae74a695542997b22f6a683",
+      "agent_type": "react",
+      "gold_answer": "late-Romantic period",
+      "predicted_answer": "The Piano Concerto was composed in 1793.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0f88c5542997b2ef7d0bb",
+      "agent_type": "react",
+      "gold_answer": "the Moses of his people",
+      "predicted_answer": "The Market Street Bridge was named in honor of John Ross, who was described as the \"Moses of his people.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a867267554299211dda2b37",
+      "agent_type": "react",
+      "gold_answer": "Steven Rose",
+      "predicted_answer": "John Heffernan portrayed Steven Rose in the British crime drama programme \"Luther\" starring Idris Elba.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3b6af55429969a97a818f",
+      "agent_type": "react",
+      "gold_answer": "22 acre",
+      "predicted_answer": "Rockefeller Center covers 22 acres.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3313e55429928c4239665",
+      "agent_type": "react",
+      "gold_answer": "Butia",
+      "predicted_answer": "Butia is a genus of palms.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abe39df5542991f66106104",
+      "agent_type": "react",
+      "gold_answer": "La scala di seta",
+      "predicted_answer": "La scala di seta is performed in fewer acts, as it is a one-act opera, while The Barber of Seville is in two acts.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a746c2d55429979e288294b",
+      "agent_type": "react",
+      "gold_answer": "Dilwale Dulhania Le Jayenge",
+      "predicted_answer": "\"Dilwale Dulhania Le Jayenge\" was reviewed by Kanan Gill.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adfa693554299025d62a324",
+      "agent_type": "react",
+      "gold_answer": "15 September 1978",
+      "predicted_answer": "Ei\u00f0ur Gu\u00f0johnsen, the son of Arn\u00f3r Gu\u00f0johnsen, was born on 15 September 1978.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abaa79955429901930fa87b",
+      "agent_type": "react",
+      "gold_answer": "1999",
+      "predicted_answer": "A Perfect Circle was formed in 1999.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac170775542996f0d89cc82",
+      "agent_type": "react",
+      "gold_answer": "Shia LaBeouf",
+      "predicted_answer": "Shia LaBeouf directed the American short slasher film \"Maniac,\" released on October 31, 2011.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac30198554299677310268a",
+      "agent_type": "react",
+      "gold_answer": "Ottoman\u2013Habsburg wars",
+      "predicted_answer": "The Ottoman\u2013Habsburg wars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0eebc554299422ee99562",
+      "agent_type": "react",
+      "gold_answer": "\"Free Software Magazine\"",
+      "predicted_answer": "Free Software Magazine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae747e8554299572ea547ac",
+      "agent_type": "react",
+      "gold_answer": "Pennsylvania",
+      "predicted_answer": "Woodstock Express is located in Pennsylvania.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae39ab15542991a06ce99f6",
+      "agent_type": "react",
+      "gold_answer": "Las Vegas",
+      "predicted_answer": "Las Vegas.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae2e46d5542991a06ce98f2",
+      "agent_type": "react",
+      "gold_answer": "Big Machine Records",
+      "predicted_answer": "Big Machine Records released the record for \"You Belong with Me,\" which won Best Female Video at the 2009 MTV Video Music Awards.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76cfdc55429966f1a36bf8",
+      "agent_type": "react",
+      "gold_answer": "Doyle Brunson",
+      "predicted_answer": "Doyle Brunson.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab35c6b5542992ade7c6dde",
+      "agent_type": "react",
+      "gold_answer": "Ashley Tisdale",
+      "predicted_answer": "Ashley Tisdale.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d5a2f5542995f4f402264",
+      "agent_type": "react",
+      "gold_answer": "Beirut",
+      "predicted_answer": "Abdoulaye Seye won a gold medal for 100m in 1959 in Beirut.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7b549d5542995eb53be91c",
+      "agent_type": "react",
+      "gold_answer": "1984",
+      "predicted_answer": "Arjen Robben, born in 1984, was born first compared to Memphis Depay, who was born in 1994.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac42852554299204fd21f02",
+      "agent_type": "react",
+      "gold_answer": "City of London Police",
+      "predicted_answer": "The City of London Police.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a750b1155429916b0164244",
+      "agent_type": "react",
+      "gold_answer": "Kincardine",
+      "predicted_answer": "Kincardine, Fife.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba904555429901930fa836",
+      "agent_type": "react",
+      "gold_answer": "\"Silent Night\"",
+      "predicted_answer": "The Christmas Gift EP includes \"Silent Night\" and a new song, \"Christmas Time.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e84365542990e94052b2a",
+      "agent_type": "react",
+      "gold_answer": "Congress",
+      "predicted_answer": "The Appalachian Regional Development Act of 1965 is overseen by the Appalachian Regional Commission (ARC), a federal-state partnership.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adfbda455429942ec259b32",
+      "agent_type": "react",
+      "gold_answer": "film director",
+      "predicted_answer": "Both Theodore Wharton and Fatih Akin are film directors known for their work in the film industry.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7df3f45542995f4f402348",
+      "agent_type": "react",
+      "gold_answer": "Accra, Ghana",
+      "predicted_answer": "The Meltwater Entrepreneurial School of Technology (MEST) is located in Accra, Ghana.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adca02f554299473435375c",
+      "agent_type": "react",
+      "gold_answer": "Randall L. Tobias",
+      "predicted_answer": "Randall L. Tobias resigned after being linked to the D.C. Madam escort agency.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abee6025542993fe9a41d86",
+      "agent_type": "react",
+      "gold_answer": "Pete Waterman",
+      "predicted_answer": "Pete Waterman produced Brilliant and owns significant collections of both historic and commercial railway locomotives and rolling stock.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae521415542990ba0bbb1be",
+      "agent_type": "react",
+      "gold_answer": "All Nippon Airways Co., Ltd.",
+      "predicted_answer": "All Nippon Airways (ANA) is the largest airline in Japan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74afde5542996c70cfadae",
+      "agent_type": "react",
+      "gold_answer": "Pettson and Findus",
+      "predicted_answer": "McDull, Kung Fu Kindergarten was created first, released in 2009, while Pettson & Findus: Fun Stuff was released in 2014.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7e085c5542997cc2c474fd",
+      "agent_type": "react",
+      "gold_answer": "Eilean Tioram",
+      "predicted_answer": "Castle Tioram sits on the tidal island Eilean Tioram in Loch Moidart.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abadabd554299660624163e",
+      "agent_type": "react",
+      "gold_answer": "1906",
+      "predicted_answer": "The company that manufactures Peter Scot, Khoday India Limited, was founded in 1906.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba779955429901930fa7e5",
+      "agent_type": "react",
+      "gold_answer": "Christopher Nolan",
+      "predicted_answer": "Christopher Nolan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9627b554299743d22eb36",
+      "agent_type": "react",
+      "gold_answer": "September 30",
+      "predicted_answer": "The events at Ganghwa Dolmens Gymnasium started on 20 September 2014.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5addee595542997dc79070bf",
+      "agent_type": "react",
+      "gold_answer": "Elizabeth Ashley",
+      "predicted_answer": "Elizabeth Ashley.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adc41d955429944faac249c",
+      "agent_type": "react",
+      "gold_answer": "William Shakespeare",
+      "predicted_answer": "William Shakespeare.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7950745542994bb9456ffb",
+      "agent_type": "react",
+      "gold_answer": "Best Friend Forgotten",
+      "predicted_answer": "Best Friend Forgotten was released earlier in 2004, while Mad Hot Ballroom was released in 2005.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab59943554299494045f012",
+      "agent_type": "react",
+      "gold_answer": "Jean-Marie Pfaff",
+      "predicted_answer": "Jean-Marie Pfaff",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76af655542993569682c83",
+      "agent_type": "react",
+      "gold_answer": "Larry Elmore",
+      "predicted_answer": "Larry Elmore illustrated the cover for \"Chicks in Chainmail.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae237975542992decbdcc75",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Lytton Strachey and Ludwig Renn are in the literary industry.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adea93055429939a52fe92f",
+      "agent_type": "react",
+      "gold_answer": "Panama Papers",
+      "predicted_answer": "The Panama Papers.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7cbac5554299683c1c6356",
+      "agent_type": "react",
+      "gold_answer": "U.S. Navy base",
+      "predicted_answer": "Naval Base Kitsap is a U.S. Navy base.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abb35db5542996cc5e49fe2",
+      "agent_type": "react",
+      "gold_answer": "Wolfgang Amadeus Mozart",
+      "predicted_answer": "Johanna von Koczian was offered a role at the Salzburg Festival, held in the birthplace of Wolfgang Amadeus Mozart.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7c264e5542996dd594b89e",
+      "agent_type": "react",
+      "gold_answer": "West Midlands",
+      "predicted_answer": "Birmingham",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0482f554299294b218f72",
+      "agent_type": "react",
+      "gold_answer": "Alfred Giovanni Roncalli \"Alfie\" Boe",
+      "predicted_answer": "Alfie Boe.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abbfc9d5542993f40c73c3c",
+      "agent_type": "react",
+      "gold_answer": "American",
+      "predicted_answer": "The Jackson Crossing enclosed shopping mall hosts a chain department store from the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7ccfb455429907fabef041",
+      "agent_type": "react",
+      "gold_answer": "Hong Kong",
+      "predicted_answer": "Hong Kong.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8ccb97554299441c6b9f0c",
+      "agent_type": "react",
+      "gold_answer": "Floyd Patterson",
+      "predicted_answer": "Sonny Liston.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8036c9554299485f59858e",
+      "agent_type": "react",
+      "gold_answer": "Sugar Ray",
+      "predicted_answer": "Sugar Ray had more hit singles after changing to a more mainstream pop music style.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7359b155429901807dafda",
+      "agent_type": "react",
+      "gold_answer": "Tusheti National Park",
+      "predicted_answer": "Tusheti National Park.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85d2915542994c784ddb81",
+      "agent_type": "react",
+      "gold_answer": "vocalist",
+      "predicted_answer": "Both Tim Wheeler and Ranking Roger have skills as vocalists.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7c8ea955429935c91b521c",
+      "agent_type": "react",
+      "gold_answer": "research university",
+      "predicted_answer": "Both Liberty University and the University of Waterloo are institutions of higher education.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ade88ca55429939a52fe8e7",
+      "agent_type": "react",
+      "gold_answer": "New Orleans, Louisiana",
+      "predicted_answer": "New Orleans, Louisiana.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0f616554299422ee9957d",
+      "agent_type": "react",
+      "gold_answer": "Aberfoyle Park",
+      "predicted_answer": "The Electoral district of Fisher covers the city of Adelaide, which has the shopping mall called \"The Hub.\"",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74b7b05542996c70cfadbb",
+      "agent_type": "react",
+      "gold_answer": "U.S.",
+      "predicted_answer": "Both the Battle of Tarawa and the Battle of Fredericksburg were fought by the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf44095542995534e8c777",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both The Moon-Spinners and The Jungle Book were produced by Walt Disney Productions.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a89fbcf55429970aeb701dd",
+      "agent_type": "reflexion",
+      "gold_answer": "Lucona",
+      "predicted_answer": "Lucona",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab8173a5542992aa3b8c89c",
+      "agent_type": "reflexion",
+      "gold_answer": "five pieces",
+      "predicted_answer": "Sergei Rachmaninoff's \"Prelude in C-sharp minor\" is one part of five pieces in the \"Morceaux de fantaisie.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae4140e55429970de88d8e8",
+      "agent_type": "reflexion",
+      "gold_answer": "The Gas Face",
+      "predicted_answer": "Donald Newkirk is known for his voice-over on 3rd Bass' song \"The Gas Face.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c835b554299653c1aa0a1",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, Vanessa Petruo is from Germany, while Greek Fire is from the United States, so they are from different countries.",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5abe01c35542991f661060a0",
+      "agent_type": "reflexion",
+      "gold_answer": "Yuka Honda",
+      "predicted_answer": "Yuka Honda.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8643eb5542991e771815e6",
+      "agent_type": "reflexion",
+      "gold_answer": "2 March 1952",
+      "predicted_answer": "Jane Henschel was born on 2 March 1952.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7f5a8f55429969796c1a0c",
+      "agent_type": "reflexion",
+      "gold_answer": "Matthew Flinders",
+      "predicted_answer": "The bacterial genus Flindersiella is named after Flinders University, which was named in honor of navigator Matthew Flinders.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "entity_drift",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac00999554299012d1db581",
+      "agent_type": "reflexion",
+      "gold_answer": "Waset",
+      "predicted_answer": "Waset",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae762475542997ec2727628",
+      "agent_type": "reflexion",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Beijing.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0630f5542992a796ded12",
+      "agent_type": "reflexion",
+      "gold_answer": "Erik Paulsen",
+      "predicted_answer": "Erik Paulsen.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a711d325542994082a3e5a1",
+      "agent_type": "reflexion",
+      "gold_answer": "Scorp\u00e8ne-class submarine",
+      "predicted_answer": "The Scorp\u00e8ne-class submarine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7f85055542994857a7675a",
+      "agent_type": "reflexion",
+      "gold_answer": "population of 10,445",
+      "predicted_answer": "The population of Fitzroy, where the Mayfields bar is located, is 10,445 according to the 2016 Census.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab7d310554299366779400a",
+      "agent_type": "reflexion",
+      "gold_answer": "968",
+      "predicted_answer": "Saint Matilda died on 14 March 968.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae01a6a554299025d62a3f9",
+      "agent_type": "reflexion",
+      "gold_answer": "United States",
+      "predicted_answer": "United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae002bf55429925eb1afbda",
+      "agent_type": "reflexion",
+      "gold_answer": "Ohio",
+      "predicted_answer": "The Black Keys are from Ohio.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab8417955429919ba4e228e",
+      "agent_type": "reflexion",
+      "gold_answer": "California",
+      "predicted_answer": "California",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d4a2c5542997cc2c4744b",
+      "agent_type": "reflexion",
+      "gold_answer": "George Balanchine",
+      "predicted_answer": "George Balanchine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab410745542996a3a969f09",
+      "agent_type": "reflexion",
+      "gold_answer": "second",
+      "predicted_answer": "\"Fifteen Million Merits\" is the second episode of the first season of \"Black Mirror.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8978c9554299669944a52d",
+      "agent_type": "reflexion",
+      "gold_answer": "military",
+      "predicted_answer": "Beijing Nanyuan Airport is a military airbase that also serves as a commercial airport for China United Airlines.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7b6a87554299042af8f76c",
+      "agent_type": "reflexion",
+      "gold_answer": "rock",
+      "predicted_answer": "Both Perry Farrell and Roger Hodgson are associated with rock music, specifically alternative rock and progressive rock, respectively.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae5069455429960a22e0244",
+      "agent_type": "reflexion",
+      "gold_answer": "1944",
+      "predicted_answer": "Susan Denberg was born on 2 August 1944.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76043a554299109176e605",
+      "agent_type": "reflexion",
+      "gold_answer": "Kelly Ann McGillis",
+      "predicted_answer": "Kelly McGillis",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a80b1cf5542992bc0c4a7af",
+      "agent_type": "reflexion",
+      "gold_answer": "four",
+      "predicted_answer": "The team that races the Red Bull RB4, Red Bull Racing, has won four successive Constructors' Championship titles.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5add5e9d5542992ae4cec52b",
+      "agent_type": "reflexion",
+      "gold_answer": "American",
+      "predicted_answer": "Both Spider One and John Popper are American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e1f2355429917b4a5bd2e",
+      "agent_type": "reflexion",
+      "gold_answer": "the State of Georgia as part of the Georgia World Congress Center Authority",
+      "predicted_answer": "The 2003 SEC Championship Game was played at the Georgia Dome, which was owned and operated by the State of Georgia as part of the Georgia World Congress Center Authority.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7dbe735542997cc2c47491",
+      "agent_type": "reflexion",
+      "gold_answer": "Donald Jay Fagen",
+      "predicted_answer": "Donald Fagen is older than Eddie Vedder.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf0ff15542992d7e9f92a1",
+      "agent_type": "reflexion",
+      "gold_answer": "the 209 Corps of the Afghan National Army",
+      "predicted_answer": "General Qadam Shah Shahim resigned after the attack on Camp Shaheen headquarters.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0fbc7554299294b219064",
+      "agent_type": "reflexion",
+      "gold_answer": "Richard III",
+      "predicted_answer": "Richard III",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab63a6c5542995eadeeff82",
+      "agent_type": "reflexion",
+      "gold_answer": "Finn Wolfhard",
+      "predicted_answer": "Finn Wolfhard.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab983d0554299131ca42357",
+      "agent_type": "reflexion",
+      "gold_answer": "All Things Must Pass",
+      "predicted_answer": "All Things Must Pass",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0cee155429945ae959460",
+      "agent_type": "reflexion",
+      "gold_answer": "\"Miami Latin Boys\"",
+      "predicted_answer": "Miami Sound Machine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abccf405542993a06baf96e",
+      "agent_type": "reflexion",
+      "gold_answer": "Erich Seligmann Fromm",
+      "predicted_answer": "Erich Fromm has a broader scope of profession, being a social psychologist, psychoanalyst, sociologist, philosopher, and democratic socialist, while Ralph Ellison is primarily known as a novelist and literary critic.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae1451555429920d523436a",
+      "agent_type": "reflexion",
+      "gold_answer": "Paul Carrack",
+      "predicted_answer": "Paul Carrack had a solo career.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8047065542992bc0c4a6d7",
+      "agent_type": "reflexion",
+      "gold_answer": "San Juan",
+      "predicted_answer": "San Juan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae449bb5542995ad6573d33",
+      "agent_type": "reflexion",
+      "gold_answer": "Serbia and Montenegro",
+      "predicted_answer": "Serbia and Montenegro.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7cfb4955429909bec768da",
+      "agent_type": "reflexion",
+      "gold_answer": "1945",
+      "predicted_answer": "The war lasted until 1945.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae73ca65542997b22f6a625",
+      "agent_type": "reflexion",
+      "gold_answer": "City of Westminster",
+      "predicted_answer": "London",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8367685542992ef85e22ad",
+      "agent_type": "reflexion",
+      "gold_answer": "U.S. Route 62",
+      "predicted_answer": "The William H. Harsha Bridge carries U.S. Route 62.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac3bb545542993915413907",
+      "agent_type": "reflexion",
+      "gold_answer": "Slow Moving Millie",
+      "predicted_answer": "Slow Moving Millie.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd0e3b5542996e802b46cd",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Dave Matthews Band and Robert Young are rock-based musicians.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b68e755429949d91db59e",
+      "agent_type": "reflexion",
+      "gold_answer": "Kesha",
+      "predicted_answer": "Kesha.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b222755429971feec4648",
+      "agent_type": "reflexion",
+      "gold_answer": "FC Barcelona",
+      "predicted_answer": "The current holder of Ligue 1 Young Player of the Year, Ousmane Demb\u00e9l\u00e9, plays for FC Barcelona.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a1bdd5542990783324e60",
+      "agent_type": "reflexion",
+      "gold_answer": "foot race",
+      "predicted_answer": "The Panhellenic Games and Hoplitodromos involve athletic competitions, specifically foot races.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85374e5542992a431d1aef",
+      "agent_type": "reflexion",
+      "gold_answer": "7\u20135",
+      "predicted_answer": "The Cowboys' record in the first season under Jimmy Johnson, who later became a broadcaster and executive, was 7\u20135.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae26f125542992decbdcd02",
+      "agent_type": "reflexion",
+      "gold_answer": "LeAnn Rimes",
+      "predicted_answer": "Johnny Cash's album \"Water from the Wells of Home\" contains a song written by Paul McCartney.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ae74a695542997b22f6a683",
+      "agent_type": "reflexion",
+      "gold_answer": "late-Romantic period",
+      "predicted_answer": "The Piano Concerto was composed during the late Romantic period.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ae0f88c5542997b2ef7d0bb",
+      "agent_type": "reflexion",
+      "gold_answer": "the Moses of his people",
+      "predicted_answer": "The Market Street Bridge was named in honor of John Ross, who was described as the \"Moses of his people.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a867267554299211dda2b37",
+      "agent_type": "reflexion",
+      "gold_answer": "Steven Rose",
+      "predicted_answer": "John Heffernan portrayed Steven Rose in the British crime drama programme \"Luther\" starring Idris Elba.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3b6af55429969a97a818f",
+      "agent_type": "reflexion",
+      "gold_answer": "22 acre",
+      "predicted_answer": "Rockefeller Center covers 22 acres.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3313e55429928c4239665",
+      "agent_type": "reflexion",
+      "gold_answer": "Butia",
+      "predicted_answer": "Butia is a genus of palms.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abe39df5542991f66106104",
+      "agent_type": "reflexion",
+      "gold_answer": "La scala di seta",
+      "predicted_answer": "La scala di seta is performed in fewer acts, as it is a one-act opera, while The Barber of Seville is a two-act opera.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a746c2d55429979e288294b",
+      "agent_type": "reflexion",
+      "gold_answer": "Dilwale Dulhania Le Jayenge",
+      "predicted_answer": "\"Dilwale Dulhania Le Jayenge\" was reviewed by Kanan Gill.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adfa693554299025d62a324",
+      "agent_type": "reflexion",
+      "gold_answer": "15 September 1978",
+      "predicted_answer": "Ei\u00f0ur Gu\u00f0johnsen, the son of Arn\u00f3r Gu\u00f0johnsen, was born on 15 September 1978.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abaa79955429901930fa87b",
+      "agent_type": "reflexion",
+      "gold_answer": "1999",
+      "predicted_answer": "Puscifer was formed in 2003.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac170775542996f0d89cc82",
+      "agent_type": "reflexion",
+      "gold_answer": "Shia LaBeouf",
+      "predicted_answer": "Shia LaBeouf directed the American short slasher film \"Maniac,\" released on October 31, 2011.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac30198554299677310268a",
+      "agent_type": "reflexion",
+      "gold_answer": "Ottoman\u2013Habsburg wars",
+      "predicted_answer": "The Ottoman\u2013Habsburg wars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0eebc554299422ee99562",
+      "agent_type": "reflexion",
+      "gold_answer": "\"Free Software Magazine\"",
+      "predicted_answer": "Free Software Magazine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae747e8554299572ea547ac",
+      "agent_type": "reflexion",
+      "gold_answer": "Pennsylvania",
+      "predicted_answer": "Woodstock Express is located in Pennsylvania.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae39ab15542991a06ce99f6",
+      "agent_type": "reflexion",
+      "gold_answer": "Las Vegas",
+      "predicted_answer": "Las Vegas.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae2e46d5542991a06ce98f2",
+      "agent_type": "reflexion",
+      "gold_answer": "Big Machine Records",
+      "predicted_answer": "Big Machine Records released the record for \"You Belong with Me,\" which won Best Female Video at the 2009 MTV Video Music Awards.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76cfdc55429966f1a36bf8",
+      "agent_type": "reflexion",
+      "gold_answer": "Doyle Brunson",
+      "predicted_answer": "Doyle Brunson.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab35c6b5542992ade7c6dde",
+      "agent_type": "reflexion",
+      "gold_answer": "Ashley Tisdale",
+      "predicted_answer": "Ashley Tisdale.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d5a2f5542995f4f402264",
+      "agent_type": "reflexion",
+      "gold_answer": "Beirut",
+      "predicted_answer": "Abdoulaye Seye won a gold medal for 100m in 1959 in Beirut.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7b549d5542995eb53be91c",
+      "agent_type": "reflexion",
+      "gold_answer": "1984",
+      "predicted_answer": "Arjen Robben was born first in 1984, while Memphis Depay was born in 1994.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac42852554299204fd21f02",
+      "agent_type": "reflexion",
+      "gold_answer": "City of London Police",
+      "predicted_answer": "City of London Police.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a750b1155429916b0164244",
+      "agent_type": "reflexion",
+      "gold_answer": "Kincardine",
+      "predicted_answer": "Kincardine, Fife.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba904555429901930fa836",
+      "agent_type": "reflexion",
+      "gold_answer": "\"Silent Night\"",
+      "predicted_answer": "The Christmas Gift EP includes \"Silent Night\" and a new song, \"Christmas Time.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e84365542990e94052b2a",
+      "agent_type": "reflexion",
+      "gold_answer": "Congress",
+      "predicted_answer": "The United States Congress is responsible for The Appalachian Regional Development Act of 1965.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5adfbda455429942ec259b32",
+      "agent_type": "reflexion",
+      "gold_answer": "film director",
+      "predicted_answer": "Both Theodore Wharton and Fatih Akin are film directors known for their work in the film industry.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7df3f45542995f4f402348",
+      "agent_type": "reflexion",
+      "gold_answer": "Accra, Ghana",
+      "predicted_answer": "The Meltwater Entrepreneurial School of Technology (MEST) is located in Accra, Ghana.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adca02f554299473435375c",
+      "agent_type": "reflexion",
+      "gold_answer": "Randall L. Tobias",
+      "predicted_answer": "Randall L. Tobias resigned after being linked to the D.C. Madam scandal.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abee6025542993fe9a41d86",
+      "agent_type": "reflexion",
+      "gold_answer": "Pete Waterman",
+      "predicted_answer": "Pete Waterman produced Brilliant and owns significant collections of both historic and commercial railway locomotives and rolling stock.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae521415542990ba0bbb1be",
+      "agent_type": "reflexion",
+      "gold_answer": "All Nippon Airways Co., Ltd.",
+      "predicted_answer": "All Nippon Airways (ANA) is the largest airline in Japan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74afde5542996c70cfadae",
+      "agent_type": "reflexion",
+      "gold_answer": "Pettson and Findus",
+      "predicted_answer": "McDull, Kung Fu Kindergarten was created first, released in 2009, while Pettson & Findus: Fun Stuff was released in 2014.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "entity_drift",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a7e085c5542997cc2c474fd",
+      "agent_type": "reflexion",
+      "gold_answer": "Eilean Tioram",
+      "predicted_answer": "Castle Tioram sits on the tidal island Eilean Tioram in Loch Moidart.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abadabd554299660624163e",
+      "agent_type": "reflexion",
+      "gold_answer": "1906",
+      "predicted_answer": "The company that manufactures Peter Scot, Khoday India Limited, was founded in 1906.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba779955429901930fa7e5",
+      "agent_type": "reflexion",
+      "gold_answer": "Christopher Nolan",
+      "predicted_answer": "Christopher Nolan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9627b554299743d22eb36",
+      "agent_type": "reflexion",
+      "gold_answer": "September 30",
+      "predicted_answer": "The events at Ganghwa Dolmens Gymnasium started on September 20, 2014.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "entity_drift",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5addee595542997dc79070bf",
+      "agent_type": "reflexion",
+      "gold_answer": "Elizabeth Ashley",
+      "predicted_answer": "Elizabeth Ashley.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adc41d955429944faac249c",
+      "agent_type": "reflexion",
+      "gold_answer": "William Shakespeare",
+      "predicted_answer": "William Shakespeare.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7950745542994bb9456ffb",
+      "agent_type": "reflexion",
+      "gold_answer": "Best Friend Forgotten",
+      "predicted_answer": "Best Friend Forgotten was released earlier in 2004, while Mad Hot Ballroom was released in 2005.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab59943554299494045f012",
+      "agent_type": "reflexion",
+      "gold_answer": "Jean-Marie Pfaff",
+      "predicted_answer": "Jean-Marie Pfaff",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76af655542993569682c83",
+      "agent_type": "reflexion",
+      "gold_answer": "Larry Elmore",
+      "predicted_answer": "Larry Elmore illustrated the cover for \"Chicks in Chainmail.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae237975542992decbdcc75",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Lytton Strachey and Ludwig Renn are in the literary industry.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adea93055429939a52fe92f",
+      "agent_type": "reflexion",
+      "gold_answer": "Panama Papers",
+      "predicted_answer": "The Panama Papers.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7cbac5554299683c1c6356",
+      "agent_type": "reflexion",
+      "gold_answer": "U.S. Navy base",
+      "predicted_answer": "Naval Base Kitsap is a U.S. Navy base.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abb35db5542996cc5e49fe2",
+      "agent_type": "reflexion",
+      "gold_answer": "Wolfgang Amadeus Mozart",
+      "predicted_answer": "Johanna von Koczian was offered a role at the Salzburg Festival, held in the birthplace of Wolfgang Amadeus Mozart.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7c264e5542996dd594b89e",
+      "agent_type": "reflexion",
+      "gold_answer": "West Midlands",
+      "predicted_answer": "Joseph Powell Williams was active in local government in Birmingham.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac0482f554299294b218f72",
+      "agent_type": "reflexion",
+      "gold_answer": "Alfred Giovanni Roncalli \"Alfie\" Boe",
+      "predicted_answer": "Alfie Boe.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abbfc9d5542993f40c73c3c",
+      "agent_type": "reflexion",
+      "gold_answer": "American",
+      "predicted_answer": "The Jackson Crossing enclosed shopping mall hosts a chain department store from the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7ccfb455429907fabef041",
+      "agent_type": "reflexion",
+      "gold_answer": "Hong Kong",
+      "predicted_answer": "Hong Kong.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8ccb97554299441c6b9f0c",
+      "agent_type": "reflexion",
+      "gold_answer": "Floyd Patterson",
+      "predicted_answer": "Muhammad Ali beat Floyd Patterson, whom Sonny Liston knocked out in 1962.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "entity_drift",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a8036c9554299485f59858e",
+      "agent_type": "reflexion",
+      "gold_answer": "Sugar Ray",
+      "predicted_answer": "Sugar Ray had more hit singles after changing to a more mainstream pop music style.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7359b155429901807dafda",
+      "agent_type": "reflexion",
+      "gold_answer": "Tusheti National Park",
+      "predicted_answer": "Tusheti National Park.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85d2915542994c784ddb81",
+      "agent_type": "reflexion",
+      "gold_answer": "vocalist",
+      "predicted_answer": "Both Tim Wheeler and Ranking Roger are vocalists.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7c8ea955429935c91b521c",
+      "agent_type": "reflexion",
+      "gold_answer": "research university",
+      "predicted_answer": "Liberty University and the University of Waterloo are both classified as research universities.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ade88ca55429939a52fe8e7",
+      "agent_type": "reflexion",
+      "gold_answer": "New Orleans, Louisiana",
+      "predicted_answer": "New Orleans, Louisiana.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0f616554299422ee9957d",
+      "agent_type": "reflexion",
+      "gold_answer": "Aberfoyle Park",
+      "predicted_answer": "The Electoral district of Fisher covers the suburb of Aberfoyle Park in the City of Onkaparinga, South Australia, which has the shopping mall called \"The Hub.\"",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a74b7b05542996c70cfadbb",
+      "agent_type": "reflexion",
+      "gold_answer": "U.S.",
+      "predicted_answer": "Both the Battle of Tarawa and the Battle of Fredericksburg were fought by the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf44095542995534e8c777",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both The Moon-Spinners and The Jungle Book were produced by Walt Disney Productions.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a89fbcf55429970aeb701dd",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Lucona",
+      "predicted_answer": "Lucona.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab8173a5542992aa3b8c89c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "five pieces",
+      "predicted_answer": "\"Prelude in C-sharp minor\" is one part of five pieces in \"Morceaux de fantaisie.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae4140e55429970de88d8e8",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "The Gas Face",
+      "predicted_answer": "Donald Newkirk is known for his voice-over on 3rd Bass' song \"The Gas Face.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c835b554299653c1aa0a1",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, Vanessa Petruo is from Germany, while Greek Fire is from the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abe01c35542991f661060a0",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Yuka Honda",
+      "predicted_answer": "Yuka Honda.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8643eb5542991e771815e6",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "2 March 1952",
+      "predicted_answer": "Jane Henschel was born on 2 March 1952.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7f5a8f55429969796c1a0c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Matthew Flinders",
+      "predicted_answer": "Flindersiella is named after Flinders University, which is named in honor of navigator Matthew Flinders.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "entity_drift",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac00999554299012d1db581",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Waset",
+      "predicted_answer": "Waset",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae762475542997ec2727628",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Beijing",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0630f5542992a796ded12",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Erik Paulsen",
+      "predicted_answer": "Erik Paulsen.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a711d325542994082a3e5a1",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Scorp\u00e8ne-class submarine",
+      "predicted_answer": "The Scorp\u00e8ne-class submarine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7f85055542994857a7675a",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "population of 10,445",
+      "predicted_answer": "The population of Fitzroy, where the Mayfields bar is located, is 10,445 according to the 2016 Census.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab7d310554299366779400a",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "968",
+      "predicted_answer": "Saint Matilda died on 14 March 968.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae01a6a554299025d62a3f9",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "United States",
+      "predicted_answer": "United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae002bf55429925eb1afbda",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Ohio",
+      "predicted_answer": "The Black Keys are from Ohio.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab8417955429919ba4e228e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "California",
+      "predicted_answer": "California",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d4a2c5542997cc2c4744b",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "George Balanchine",
+      "predicted_answer": "George Balanchine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab410745542996a3a969f09",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "second",
+      "predicted_answer": "\"Fifteen Million Merits\" is the second episode of the first season of \"Black Mirror.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8978c9554299669944a52d",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "military",
+      "predicted_answer": "Beijing Nanyuan Airport is a military airbase that serves as the main hub for China United Airlines.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7b6a87554299042af8f76c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "rock",
+      "predicted_answer": "Both Perry Farrell and Roger Hodgson are known for their work in the alternative rock genre.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae5069455429960a22e0244",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "1944",
+      "predicted_answer": "Susan Denberg was born in 1944.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76043a554299109176e605",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Kelly Ann McGillis",
+      "predicted_answer": "Kelly McGillis",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a80b1cf5542992bc0c4a7af",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "four",
+      "predicted_answer": "The team that races the Red Bull RB4, Red Bull Racing, won four successive Constructors' Championship titles.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5add5e9d5542992ae4cec52b",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "American",
+      "predicted_answer": "Both Spider One and John Popper are American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e1f2355429917b4a5bd2e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "the State of Georgia as part of the Georgia World Congress Center Authority",
+      "predicted_answer": "The Georgia Dome was owned and operated by the State of Georgia as part of the Georgia World Congress Center Authority.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7dbe735542997cc2c47491",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Donald Jay Fagen",
+      "predicted_answer": "Donald Fagen is older than Eddie Vedder.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf0ff15542992d7e9f92a1",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "the 209 Corps of the Afghan National Army",
+      "predicted_answer": "General Qadam Shah Shahim resigned after the attack on Camp Shaheen headquarters.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac0fbc7554299294b219064",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Richard III",
+      "predicted_answer": "Peter Dinklage performed the title role in \"Richard III\" at The Public Theater in 1995.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab63a6c5542995eadeeff82",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Finn Wolfhard",
+      "predicted_answer": "Finn Wolfhard.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab983d0554299131ca42357",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "All Things Must Pass",
+      "predicted_answer": "All Things Must Pass",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0cee155429945ae959460",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "\"Miami Latin Boys\"",
+      "predicted_answer": "Miami Sound Machine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abccf405542993a06baf96e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Erich Seligmann Fromm",
+      "predicted_answer": "Erich Fromm has a broader scope of profession, being a social psychologist, psychoanalyst, sociologist, humanistic philosopher, and democratic socialist, while Ralph Ellison is primarily known as a novelist and literary critic.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae1451555429920d523436a",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Paul Carrack",
+      "predicted_answer": "Paul Carrack had a solo career.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8047065542992bc0c4a6d7",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "San Juan",
+      "predicted_answer": "San Juan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae449bb5542995ad6573d33",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Serbia and Montenegro",
+      "predicted_answer": "Mladen Krstaji\u0107 represented Serbia and Montenegro at the FIFA 2006 World Cup.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7cfb4955429909bec768da",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "1945",
+      "predicted_answer": "The outbreak of World War II in 1939, which lasted until 1945.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae73ca65542997b22f6a625",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "City of Westminster",
+      "predicted_answer": "London.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8367685542992ef85e22ad",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "U.S. Route 62",
+      "predicted_answer": "The William H. Harsha bridge carries U.S. Route 62.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac3bb545542993915413907",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Slow Moving Millie",
+      "predicted_answer": "Slow Moving Millie.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd0e3b5542996e802b46cd",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Dave Matthews Band and Robert Young are rock-based musicians.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b68e755429949d91db59e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Kesha",
+      "predicted_answer": "Kesha.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b222755429971feec4648",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "FC Barcelona",
+      "predicted_answer": "The current holder of Ligue 1 Young Player of the Year, Ousmane Demb\u00e9l\u00e9, plays for FC Barcelona.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a1bdd5542990783324e60",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "foot race",
+      "predicted_answer": "The Panhellenic Games and Hoplitodromos involve athletic competitions, specifically foot races.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85374e5542992a431d1aef",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "7\u20135",
+      "predicted_answer": "The Cowboys' record in the first season under Jimmy Johnson, who later became a broadcaster and executive, was 7\u20135.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae26f125542992decbdcd02",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "LeAnn Rimes",
+      "predicted_answer": "Johnny Cash's album \"Water from the Wells of Home\" contains a song written by Paul McCartney.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ae74a695542997b22f6a683",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "late-Romantic period",
+      "predicted_answer": "The Piano Concerto was composed in the late Romantic period.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ae0f88c5542997b2ef7d0bb",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "the Moses of his people",
+      "predicted_answer": "The Market Street Bridge was named in honor of John Ross, who was described as the \"Moses of his people.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a867267554299211dda2b37",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Steven Rose",
+      "predicted_answer": "John Heffernan portrayed Steven Rose in the British crime drama programme \"Luther\" starring Idris Elba.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3b6af55429969a97a818f",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "22 acre",
+      "predicted_answer": "The Rockefeller Center covers 22 acres.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3313e55429928c4239665",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Butia",
+      "predicted_answer": "Butia is a genus of palms.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abe39df5542991f66106104",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "La scala di seta",
+      "predicted_answer": "La scala di seta is performed in fewer acts, as it is a one-act opera, while The Barber of Seville has two acts.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a746c2d55429979e288294b",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Dilwale Dulhania Le Jayenge",
+      "predicted_answer": "\"Dilwale Dulhania Le Jayenge\" was reviewed by Kanan Gill.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adfa693554299025d62a324",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "15 September 1978",
+      "predicted_answer": "Ei\u00f0ur Gu\u00f0johnsen, the son of Arn\u00f3r Gu\u00f0johnsen, was born on 15 September 1978.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abaa79955429901930fa87b",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "1999",
+      "predicted_answer": "Puscifer was formed in 2003.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac170775542996f0d89cc82",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Shia LaBeouf",
+      "predicted_answer": "Shia LaBeouf directed the American short slasher film released on October 31, 2011.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac30198554299677310268a",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Ottoman\u2013Habsburg wars",
+      "predicted_answer": "The Ottoman\u2013Habsburg wars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0eebc554299422ee99562",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "\"Free Software Magazine\"",
+      "predicted_answer": "Free Software Magazine.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae747e8554299572ea547ac",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Pennsylvania",
+      "predicted_answer": "Woodstock Express is located in Pennsylvania.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae39ab15542991a06ce99f6",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Las Vegas",
+      "predicted_answer": "Las Vegas.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae2e46d5542991a06ce98f2",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Big Machine Records",
+      "predicted_answer": "Big Machine Records released the record for \"You Belong with Me,\" which won Best Female Video at the 2009 MTV Video Music Awards.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76cfdc55429966f1a36bf8",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Doyle Brunson",
+      "predicted_answer": "Doyle Brunson won the 1979 Mixed Doubles - No Limit Hold'em.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab35c6b5542992ade7c6dde",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Ashley Tisdale",
+      "predicted_answer": "Ashley Tisdale.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d5a2f5542995f4f402264",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Beirut",
+      "predicted_answer": "Abdoulaye Seye won a gold medal for 100m in 1959 at the Mediterranean Games held in Beirut, Lebanon.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7b549d5542995eb53be91c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "1984",
+      "predicted_answer": "Arjen Robben was born first in 1984, while Memphis Depay was born in 1994.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac42852554299204fd21f02",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "City of London Police",
+      "predicted_answer": "City of London Police.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a750b1155429916b0164244",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Kincardine",
+      "predicted_answer": "Kincardine, Fife.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba904555429901930fa836",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "\"Silent Night\"",
+      "predicted_answer": "The Christmas Gift EP includes \"Silent Night\" and a new song, \"Christmas Time.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e84365542990e94052b2a",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Congress",
+      "predicted_answer": "The Appalachian Regional Commission (ARC) is responsible for the Appalachian Regional Development Act of 1965.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adfbda455429942ec259b32",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "film director",
+      "predicted_answer": "Both Theodore Wharton and Fatih Akin are film directors known for their contributions to cinema and have directed multiple films.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7df3f45542995f4f402348",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Accra, Ghana",
+      "predicted_answer": "The Meltwater Entrepreneurial School of Technology (MEST) is located in Accra, Ghana.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adca02f554299473435375c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Randall L. Tobias",
+      "predicted_answer": "Randall L. Tobias resigned after being linked to the D.C. Madam escort agency.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abee6025542993fe9a41d86",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Pete Waterman",
+      "predicted_answer": "Pete Waterman produced Brilliant and owns significant collections of both historic and commercial railway locomotives and rolling stock.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae521415542990ba0bbb1be",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "All Nippon Airways Co., Ltd.",
+      "predicted_answer": "All Nippon Airways (ANA) is the largest airline in Japan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74afde5542996c70cfadae",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Pettson and Findus",
+      "predicted_answer": "Pettson and Findus was created first, with the first book published in 1984, while McDull, Kung Fu Kindergarten was released in 2009.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7e085c5542997cc2c474fd",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Eilean Tioram",
+      "predicted_answer": "Castle Tioram sits on the tidal island Eilean Tioram in Loch Moidart.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abadabd554299660624163e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "1906",
+      "predicted_answer": "The company that manufactures Peter Scot, Khoday India Limited, was founded in 1906.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba779955429901930fa7e5",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Christopher Nolan",
+      "predicted_answer": "Christopher Nolan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9627b554299743d22eb36",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "September 30",
+      "predicted_answer": "The Ganghwa Dolmens Gymnasium held events starting on September 20, 2014.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "entity_drift",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5addee595542997dc79070bf",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Elizabeth Ashley",
+      "predicted_answer": "Elizabeth Ashley.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adc41d955429944faac249c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "William Shakespeare",
+      "predicted_answer": "William Shakespeare.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7950745542994bb9456ffb",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Best Friend Forgotten",
+      "predicted_answer": "Best Friend Forgotten was released earlier in 2004, while Mad Hot Ballroom was released in 2005.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab59943554299494045f012",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Jean-Marie Pfaff",
+      "predicted_answer": "Jean-Marie Pfaff",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76af655542993569682c83",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Larry Elmore",
+      "predicted_answer": "Larry Elmore illustrated the cover for \"Chicks in Chainmail.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae237975542992decbdcc75",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Lytton Strachey and Ludwig Renn are in the literary industry.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adea93055429939a52fe92f",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Panama Papers",
+      "predicted_answer": "The Panama Papers.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7cbac5554299683c1c6356",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "U.S. Navy base",
+      "predicted_answer": "Naval Base Kitsap is a U.S. Navy base.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abb35db5542996cc5e49fe2",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Wolfgang Amadeus Mozart",
+      "predicted_answer": "Johanna von Koczian was offered a role at a prominent festival of music and drama held in the birthplace of Wolfgang Amadeus Mozart.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7c264e5542996dd594b89e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "West Midlands",
+      "predicted_answer": "Joseph Powell Williams was active in local government in the County Borough of Birmingham.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac0482f554299294b218f72",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Alfred Giovanni Roncalli \"Alfie\" Boe",
+      "predicted_answer": "The City of Bath Male Choir sang with Alfie Boe.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abbfc9d5542993f40c73c3c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "American",
+      "predicted_answer": "The Jackson Crossing enclosed shopping mall hosts a chain department store from the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7ccfb455429907fabef041",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Hong Kong",
+      "predicted_answer": "Hong Kong.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8ccb97554299441c6b9f0c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Floyd Patterson",
+      "predicted_answer": "Floyd Patterson.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8036c9554299485f59858e",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Sugar Ray",
+      "predicted_answer": "Sugar Ray had more hit singles after changing to a more mainstream pop music style.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7359b155429901807dafda",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Tusheti National Park",
+      "predicted_answer": "Tusheti National Park",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85d2915542994c784ddb81",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "vocalist",
+      "predicted_answer": "Both Tim Wheeler and Ranking Roger are skilled vocalists.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7c8ea955429935c91b521c",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "research university",
+      "predicted_answer": "Both Liberty University and the University of Waterloo are classified as research universities.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ade88ca55429939a52fe8e7",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "New Orleans, Louisiana",
+      "predicted_answer": "New Orleans, Louisiana.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0f616554299422ee9957d",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "Aberfoyle Park",
+      "predicted_answer": "The electoral district of Fisher covers the suburb of Aberfoyle Park, where \"The Hub\" shopping mall is located.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a74b7b05542996c70cfadbb",
+      "agent_type": "mini_lats_branching",
+      "gold_answer": "U.S.",
+      "predicted_answer": "Both the Battle of Tarawa and the Battle of Fredericksburg were fought by the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding",
+    "mini_lats_branching"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop or drifts to a wrong second-hop entity. The tradeoff is higher attempts, token cost, and latency. In a real report, students should explain when the reflection memory was useful, which failure modes remained, and whether evaluator quality limited gains."
+}
